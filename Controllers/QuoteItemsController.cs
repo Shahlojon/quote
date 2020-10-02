@@ -9,11 +9,11 @@ namespace QuoteApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class QouteItemsController : ControllerBase
+    public class QuoteItemsController : ControllerBase
     {
         private readonly QuoteContext _context;
 
-        public QouteItemsController(QuoteContext context)
+        public QuoteItemsController(QuoteContext context)
         {
             _context = context;
         }
@@ -71,16 +71,16 @@ namespace QuoteApi.Controllers
             return NoContent();
         }
 
-        // POST: api/TodoItems
+        // POST: api/QuoteItems
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<QuoteItem>> PostQuoteItem(QuoteItem todoItem)
+        public async Task<ActionResult<QuoteItem>> PostQuoteItem(QuoteItem quoteItem)
         {
-            _context.QuoteItems.Add(todoItem);
+            _context.QuoteItems.Add(quoteItem);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetQuoteItem", new { id = todoItem.Id }, todoItem);
+            return CreatedAtAction("GetQuoteItem", new { id = quoteItem.Id }, quoteItem);
         }
 
 
@@ -103,8 +103,6 @@ namespace QuoteApi.Controllers
         private bool QuoteItemExists(long id)
         {
             return _context.QuoteItems.Any(e => e.Id == id);
-        }
-
-           
+        }           
     }
 }

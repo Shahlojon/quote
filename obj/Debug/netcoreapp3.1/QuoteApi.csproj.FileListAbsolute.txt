@@ -132,3 +132,4 @@ C:\projects\web\QuoteApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\projects\web\QuoteApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\projects\web\QuoteApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\projects\web\QuoteApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\projects\web\QuoteApi\bin\Debug\netcoreapp3.1\package.json
