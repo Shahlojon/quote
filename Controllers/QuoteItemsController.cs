@@ -50,9 +50,19 @@ namespace QuoteApi.Controllers
             {
                 return BadRequest();
             }
-
+            
             _context.Entry(quoteItem).State = EntityState.Modified;
-
+            if (quoteItem.author == "")
+            {
+                ModelState.AddModelError("Author", "Не добавлен автор");
+            }
+            if (quoteItem.quote == "")
+            {
+                ModelState.AddModelError("Quote", "Не добавлена цитата");
+            }
+            // если есть ошибки - возвращаем ошибку 400
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             try
             {
                 await _context.SaveChangesAsync();
@@ -86,7 +96,7 @@ namespace QuoteApi.Controllers
             // если есть ошибки - возвращаем ошибку 400
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-                
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetQuoteItem", new { id = quoteItem.Id }, quoteItem);
@@ -117,7 +127,7 @@ namespace QuoteApi.Controllers
             return quote;
         }
 
-        [HttpGet("{category/{id}}")]
+        [HttpGet("category/{id}")]
         public async Task<ActionResult<IEnumerable<QuoteItem>>> GetQuotesByCategory(string category)
         {
             var quotes = await _context.QuoteItems.Where(x=>x.category == category).ToListAsync();

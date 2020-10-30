@@ -7,7 +7,7 @@ using QuoteApi.Models;
 
 namespace QuoteApi
 {    
-    public class OverduesQuoteDeleteService: IHostedService, IDisposable
+    public  class  OverduesQuoteDeleteService: IHostedService, IDisposable
     {
         private readonly ILogger _logger;        
         private Timer _timer;
