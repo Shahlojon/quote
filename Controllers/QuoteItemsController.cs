@@ -101,7 +101,7 @@ namespace QuoteApi.Controllers
             return quoteItem;
         }
 
-        [HttpGet]
+        [HttpGet("random")]
         public async Task<ActionResult<QuoteItem>> GetRandomQuoteItem()
         {
             var quotes = await _context.QuoteItems.ToListAsync();
@@ -109,7 +109,7 @@ namespace QuoteApi.Controllers
             return quote;
         }
 
-        [HttpGet("{category}")]
+        [HttpGet("{category/{id}}")]
         public async Task<ActionResult<IEnumerable<QuoteItem>>> GetQuotesByCategory(string category)
         {
             var quotes = await _context.QuoteItems.Where(x=>x.category == category).ToListAsync();
