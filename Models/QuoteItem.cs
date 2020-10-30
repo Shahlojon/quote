@@ -9,4 +9,5 @@ public class QuoteItem
     public string quote { get; set; }
     [Required(ErrorMessage = "Write category")]
     public string category { get; set; }
+    public System.DateTime created { get; set;}
 }
