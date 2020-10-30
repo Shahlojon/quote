@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuoteApi.Models;
@@ -13,12 +15,28 @@ namespace QuoteApi.Controllers
     public class QuoteItemsController : ControllerBase
     {
         private readonly QuoteContext _context;
+        private readonly System.Timers.Timer timer=null;
 
         public QuoteItemsController(QuoteContext context)
         {
+            // if(timer == null)
+            // {
+            //     timer = new System.Timers.Timer();
+            //     timer.Elapsed += Dowork;
+            //     timer.Interval = 500000;
+            //     timer.Enabled = true;
+            // }
             _context = context;
         }
 
+        // public void Dowork(object source, ElapsedEventArgs e){
+        //     var quotes= _context.QuoteItems.ToList();
+        //     foreach(var quote in quotes){
+        //         if(quote.created.AddHours(1)>DateTime.Now){
+        //             _context.QuoteItems.Remove(quote);
+        //         }
+        //     }
+        // }
         // GET: api/QuoteItems
         [HttpGet]
         public async Task<ActionResult<IEnumerable<QuoteItem>>> GetQuoteItems()
