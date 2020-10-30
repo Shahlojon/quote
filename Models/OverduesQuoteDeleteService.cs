@@ -35,7 +35,7 @@ namespace QuoteApi
                 Console.WriteLine("After deleting {0}", items.Count);
 
                 Console.WriteLine("Fired {0}", DateTime.Now);
-                _timer.Change(60000, Timeout.Infinite);
+                _timer.Change(300000, Timeout.Infinite);
             }
         }
 
