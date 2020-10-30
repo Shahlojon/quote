@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bz9SCgif7gfTnF5xgWyzOxWj5paJBBGbllnwBkv2DWsEoJP5GXi84ovV2wqawssBNp478JkU1kYWSF3fxJTNWw==",
+  "dgSpecHash": "jycGUNZyj/tLbPHC4D+L7Go3iT3trqG5MwMnWW/sE/bIw04OYZzXFvzryK7rK5ydY40EoZMU/l9J+WI2by6idQ==",
   "success": true,
-  "projectFilePath": "C:\\projects\\web\\QuoteApi\\QuoteApi.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\QuoteApi\\QuoteApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\web\\QuoteApi\\QuoteApi.csproj": {}
+    "C:\\Users\\User\\Desktop\\QuoteApi\\QuoteApi.csproj": {}
   },
   "projects": {
-    "C:\\projects\\web\\QuoteApi\\QuoteApi.csproj": {
+    "C:\\Users\\User\\Desktop\\QuoteApi\\QuoteApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\web\\QuoteApi\\QuoteApi.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\QuoteApi\\QuoteApi.csproj",
         "projectName": "QuoteApi",
-        "projectPath": "C:\\projects\\web\\QuoteApi\\QuoteApi.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\QuoteApi\\QuoteApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\web\\QuoteApi\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\QuoteApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"

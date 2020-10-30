@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -100,6 +101,20 @@ namespace QuoteApi.Controllers
             return quoteItem;
         }
 
+        [HttpGet]
+        public async Task<ActionResult<QuoteItem>> GetRandomQuoteItem()
+        {
+            var quotes = await _context.QuoteItems.ToListAsync();
+            var quote = quotes[new Random().Next(0,quotes.Count)];
+            return quote;
+        }
+
+        [HttpGet("{category}")]
+        public async Task<ActionResult<IEnumerable<QuoteItem>>> GetQuotesByCategory(string category)
+        {
+            var quotes = await _context.QuoteItems.Where(x=>x.category == category).ToListAsync();
+            return quotes;
+        }
         private bool QuoteItemExists(long id)
         {
             return _context.QuoteItems.Any(e => e.Id == id);
