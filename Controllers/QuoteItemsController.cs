@@ -79,6 +79,14 @@ namespace QuoteApi.Controllers
         public async Task<ActionResult<QuoteItem>> PostQuoteItem(QuoteItem quoteItem)
         {
             _context.QuoteItems.Add(quoteItem);
+            if (quoteItem.author == "")
+            {
+                ModelState.AddModelError("Author", "Не добавлен автор");
+            }
+            // если есть ошибки - возвращаем ошибку 400
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+                
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetQuoteItem", new { id = quoteItem.Id }, quoteItem);

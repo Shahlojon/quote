@@ -22,6 +22,7 @@ namespace QuoteApi
         {
             services.AddDbContext<QuoteContext>(opt =>
                opt.UseInMemoryDatabase("QuoteList"));
+            services.AddSingleton<IHostedService, OverduesQuoteDeleteService>();   
             services.AddControllers();
         }
 
